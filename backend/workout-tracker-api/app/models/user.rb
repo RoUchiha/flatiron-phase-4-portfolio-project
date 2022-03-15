@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
-    has_many :sessions, dependent: :destroy
-    has_many :exercises, through: :sessions 
+    has_many :workouts, dependent: :destroy
+    has_many :exercises, through: :workouts 
 
     validates :email, presence: {message: "You must provide an email."}
     validates :email, uniqueness: {message: "An account with this email already exists."}

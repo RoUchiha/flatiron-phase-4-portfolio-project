@@ -5,7 +5,7 @@ class CreateExercises < ActiveRecord::Migration[6.1]
       t.string :type
       t.integer :sets
       t.integer :distance
-      t.references :session, null: false, foreign_key: true
+      t.references :workout, null: false, foreign_key: true
 
       t.timestamps
     end

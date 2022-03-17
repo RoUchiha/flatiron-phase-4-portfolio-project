@@ -10,13 +10,14 @@ class WorkoutsController < ApplicationController
     end
 
     def show
-       
+       workout = Workout.find(params[:id])
+       render json: WorkoutSerializer.new(workout)
     end 
 
     private 
 
         def set_user
-            @user = User.find(params[:email])
+            @user = User.find_by(email: params[:email])
         end
 
         def workout_params

@@ -10,7 +10,7 @@ class ExercisesController < ApplicationController
     private 
 
         def set_user
-            @user = User.find(params[:email])
+            @user = User.find_by(email: params[:email])
         end
 
         

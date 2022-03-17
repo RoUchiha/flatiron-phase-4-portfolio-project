@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 4) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.integer "sets"
     t.integer "distance"
     t.integer "workout_id", null: false

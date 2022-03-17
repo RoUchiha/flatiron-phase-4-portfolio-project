@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :set_user, only: [:show, :destroy]
+    before_action :set_user, only: [:show, :update, :destroy]
 
     def index 
         users = User.all 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     def show
         user = @user
-        render json: user, include: ['workouts', 'workouts.exercises']
+        render json: UserSerializer.new(user)
     end
 
     def update

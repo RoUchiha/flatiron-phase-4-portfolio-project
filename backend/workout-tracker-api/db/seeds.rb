@@ -8,3 +8,7 @@
 
 
 user = User.create(email: "email@email.com", firstname: "me", password_digest: "pass")
+
+workout1 = user.workouts.build(name: "leg day", date: Date.today)
+
+exercise1 = workout1.exercises.build(name: "bench press", category: "resistance", sets: 6, distance: nil)

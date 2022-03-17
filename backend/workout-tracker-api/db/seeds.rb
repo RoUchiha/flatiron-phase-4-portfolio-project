@@ -9,5 +9,5 @@
 
 
 workout1 = Workout.create(name: "leg day", date: Date.today)
-
-exercise1 = workout1.exercises.build(name: "bench press", category: "resistance", sets: 6, distance: nil)
+workout2 = Workout.create(name: "chest day", date: Date.today)
+exercise1 = Exercise.create(name: "bench press", category: "resistance", sets: 6, workout_id: workout2.id)

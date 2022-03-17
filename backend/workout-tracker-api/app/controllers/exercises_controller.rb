@@ -10,10 +10,6 @@ class ExercisesController < ApplicationController
 
     private 
 
-        def set_user
-            @user = User.find_by(email: params[:email])
-        end
-
         
 
         def exercise_params

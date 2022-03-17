@@ -1,12 +1,11 @@
 class WorkoutsController < ApplicationController
     
-    before_action :set_user, only: [:show, :index, :create, :update, :destroy]
 
 
     def index
-        user = @user
         workouts = Workout.all
-        render json: workouts, include: [:date, :exercises]
+        options = { include: [:exercises] }
+        render json: WorkoutSerializer.new(workouts, options)
     end
 
     def show
@@ -16,9 +15,7 @@ class WorkoutsController < ApplicationController
 
     private 
 
-        def set_user
-            @user = User.find_by(email: params[:email])
-        end
+        
 
         def workout_params
             params.require(:workout).permit(:name, :date, :user_id)

@@ -7,6 +7,24 @@ class ExercisesController < ApplicationController
         render json: ExerciseSerializer.new(exercises)
     end
 
+    def create 
+        exercise = Exercise.new(exercise_params)
+        if exercise.save 
+            render json: WorkoutSerializer.new(workout)
+        else
+            render json: {status: :unprocessable_entity}
+        end
+    end
+
+    def update
+        exercise = Exercise.find_by(id: params[:id])
+        if exercise.update(exercise_params)
+            render json: WorkoutSerializer.new(exercise)
+        else
+            render json: {status: :unprocessable_entity}
+        end
+    end
+
 
     private 
 

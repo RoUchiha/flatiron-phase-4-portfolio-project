@@ -25,6 +25,15 @@ class ExercisesController < ApplicationController
         end
     end
 
+    def destroy
+        exercise = Exercise.find_by(id: params[:id])
+        if exercise.destroy
+            render json: {status: :ok}
+        else
+            render json: {status: :unprocessable_entity}
+        end
+    end
+
 
     private 
 

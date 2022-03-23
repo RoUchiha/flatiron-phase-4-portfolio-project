@@ -28,6 +28,7 @@ class WorkoutsController < ApplicationController
             render json: {status: :ok}
         else
             render json: {status: :unprocessable_entity}
+        end
     end
 
     private 

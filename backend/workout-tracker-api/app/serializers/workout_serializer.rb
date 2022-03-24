@@ -1,7 +1,7 @@
 class WorkoutSerializer 
 
     include FastJsonapi::ObjectSerializer
-    attributes :date, :name
+    attributes :date, :name, :id
     
     has_many :exercises
 

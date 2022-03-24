@@ -23,6 +23,14 @@ class Workout {
         workoutName.appendChild(exerciseList)
     };
 
+    createOption() {
+        const workoutSelect = document.getElementById('workout-list');
+        const opt = document.createElement('option');
+        opt.value = this.id;
+        opt.innerHTML = this.name;
+        workoutSelect.appendChild(opt)
+    }
+
 
     renderExercises() {
         const exercises = this.exercises

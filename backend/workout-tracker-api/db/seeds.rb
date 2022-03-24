@@ -8,6 +8,15 @@
 
 
 
-workout1 = Workout.create(name: "leg day", date: Date.today)
-workout2 = Workout.create(name: "chest day", date: Date.today)
+workout1 = Workout.create(name: "Sunday", date: Date.today)
+workout2 = Workout.create(name: "Monday", date: Date.today)
+workout3 = Workout.create(name: "Tuesday", date: Date.today)
+workout4 = Workout.create(name: "Wednesday", date: Date.today)
+workout5 = Workout.create(name: "Thursday", date: Date.today)
+workout6 = Workout.create(name: "Friday", date: Date.today)
+workout7 = Workout.create(name: "Saturday", date: Date.today)
+
+
+
+
 exercise1 = Exercise.create(name: "bench press", category: "resistance", sets: 6, workout_id: workout2.id)

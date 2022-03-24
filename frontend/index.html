@@ -8,7 +8,10 @@
         <div class="container">
             <div id="new-workout-container">
                 <form id="new-workout-form">
+                    <label for="workout-name">Workout Name: </label>
                     <input type="text" name="workout-name" id="new-workout-name">
+                    <input type="hidden" name="workout-date" id="new-workout-date" value=`${Date.today}`>
+                    <br><br>
                     <input type="submit" value="Create New Workout">
                 </form>
             </div>

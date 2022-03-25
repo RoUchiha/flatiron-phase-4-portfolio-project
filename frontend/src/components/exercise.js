@@ -1,3 +1,11 @@
 class Exercise {
+
+    static all = []
+
     
+
+
+
+
+
 }

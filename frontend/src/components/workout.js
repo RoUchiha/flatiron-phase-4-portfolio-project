@@ -7,15 +7,13 @@ class Workout {
     }
 
     renderWorkout() {
-        const workoutAll = document.getElementById('workouts-container')
-        workoutAll.classList.add('workout')
+        const workoutAll = document.getElementById("workouts-container")
+        workoutAll.classList.add("workout")
 
-        const workoutName = document.createElement('h1');
+        const workoutName = document.createElement("h1");
         workoutName.innerHTML - this.name;
 
         workoutName.id = `workout-${this.id}`;
-
-        workoutName.date = `workout-date-${this.date}`
 
         workoutAll.appendChild(workoutName)
 
@@ -24,8 +22,8 @@ class Workout {
     };
 
     createOption() {
-        const workoutSelect = document.getElementById('workout-list');
-        const opt = document.createElement('option');
+        const workoutSelect = document.getElementById("workout-list");
+        const opt = document.createElement("option");
         opt.value = this.id;
         opt.innerHTML = this.name;
         workoutSelect.appendChild(opt)
@@ -34,7 +32,7 @@ class Workout {
 
     renderExercises() {
         const exercises = this.exercises
-        const list = document.createElement('ul')
+        const list = document.createElement("ul")
 
         exercises.forEach(exercise => {
             const newExercise = new exercise(exercise)

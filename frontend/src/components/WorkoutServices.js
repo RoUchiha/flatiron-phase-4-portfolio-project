@@ -11,7 +11,6 @@ class WorkoutServices {
             json.forEach(workout => {
                 const workouts = new Workout(workout);
                 workouts.renderWorkout();
-                workouts.forEach(w => w.createOption())
             })
         })
     }

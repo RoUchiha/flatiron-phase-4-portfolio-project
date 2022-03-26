@@ -15,6 +15,7 @@ class Exercise {
 
     renderExercise = () => {
         const exerciseDesc = document.createElement('div');
+        exerciseDesc.classList.add("exercise-info")
 
         const exerciseName = document.createElement('li');
         exerciseName.innerHTML = this.name.charAt(0).toUpperCase() + this.name.slice(1);
@@ -50,8 +51,9 @@ class Exercise {
 
 
         const deleteExercise = document.createElement('button');
-        deleteExercise.innerText = "Remove Exercise";
+        deleteExercise.innerHTML = '&#x2612;'
         deleteExercise.id = this.id;
+        deleteExercise.title = "Remove Exercise";
         deleteExercise.classList.add("delete-button");
         exerciseDesc.appendChild(deleteExercise)
 

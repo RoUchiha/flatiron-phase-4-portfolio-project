@@ -13,6 +13,7 @@
                 <form id="new-exercise-form">
                     <label for="exercise-name">Exercise Name: </label>
                     <input type="text" name="exercise-name" id="new-exercise-name">
+                    <br>
                     <label for="exercise-category">Exercise Category: </label>
                     <select name="exercise-category" id="exercise-category-dropdown">
                         <option value="" disabled selected hidden>Select Exercise Category</option>
@@ -20,10 +21,13 @@
                         <option value="cardio">Cardio</option>
                         <option value="calisthenics">Calisthenics</option>
                     </select>
+                    <br>
                     <label for="exercise-sets">Sets (if applicable): </label>
                     <input type="number" name="exercise-sets" id="new-exercise-sets" min="1">
+                    <br>
                     <label for="exercise-distance">Distance (if applicable): </label>
                     <input type="number" name="exercise-distance" id="new-exercise-distance" min="0" step=".1">
+                    <br>
                     <label for="exercise-workout_id">Add to which workout?</label>
                     <select name="workout_id" id="workout_id">
                         <option value="" disabled selected hidden>Select Workout</option>
@@ -35,7 +39,8 @@
                         <option value="6">Friday</option>
                         <option value="7">Saturday</option>
                     </select>
-                    <input type="submit" value="Add Exercise to Workout">
+                    <br>
+                    <input type="submit" id="submit-button" value="Add Exercise to Workout">
                 </form>
 
             </div>

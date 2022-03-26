@@ -1,8 +1,9 @@
 class Workout {
 
-    constructor(workoutJSON) {
+    constructor({workoutJSON}) {
         this.name = workoutJSON.name
         this.date = workoutJSON.date
+        this.exercises = workoutJSON.exercises
         this.id = workoutJSON.id 
     }
 
@@ -35,7 +36,7 @@ class Workout {
         const list = document.createElement("ul")
 
         exercises.forEach(exercise => {
-            const newExercise = new exercise(exercise)
+            const newExercise = new Exercise(exercise)
 
             console.log(exercise, "exercise")
 

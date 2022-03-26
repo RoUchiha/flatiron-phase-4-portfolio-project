@@ -23,10 +23,10 @@ class Exercise {
         exerciseCategory.innerHTML = this.category;
 
         const exerciseSets = document.createElement('p');
-        exerciseSets.innerHTML = this.sets;
+        exerciseSets.innerHTML = this.sets + " sets";
 
         const exerciseDistance = document.createElement('p');
-        exerciseDistance.innerHTML = this.distance;
+        exerciseDistance.innerHTML = this.distance ;
 
         exerciseDesc.appendChild(exerciseName);
         exerciseDesc.appendChild(exerciseCategory);

@@ -13,6 +13,7 @@ class Workout {
 
         const workoutName = document.createElement("h1");
         workoutName.innerHTML - this.name;
+        workoutName.name = this.name;
 
         workoutName.id = `workout-${this.id}`;
 
@@ -22,13 +23,6 @@ class Workout {
         workoutName.appendChild(exerciseList);
     };
 
-    createOption() {
-        const workoutSelect = document.getElementById("workout-list");
-        const opt = document.createElement("option");
-        opt.value = this.id;
-        opt.innerHTML = this.name;
-        workoutSelect.appendChild(opt);
-    };
 
 
     renderExercises() {

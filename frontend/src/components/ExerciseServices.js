@@ -3,14 +3,14 @@ class ExerciseServices {
     formSubmit(e){
         e.preventDefault()
         const exerciseName = document.getElementById('new-exercise-name');
-        const exerciseCategory = document.getElementById('new-exercise-category');
+        const exerciseCategory = document.getElementById('exercise-category-dropdown');
         const exerciseSets = document.getElementById('new-exercise-sets');
         const exerciseDistance = document.getElementById('new-exercise-distance');
         const exerciseWorkoutId = document.getElementById('workout_id');
 
         const exerciseValues = {
             name: exerciseName.value,
-            category: exerciseCategory.value,
+            category: exerciseCategory,
             sets: exerciseSets.value,
             distance: exerciseDistance.value,
             workout_id: workout_id.value 

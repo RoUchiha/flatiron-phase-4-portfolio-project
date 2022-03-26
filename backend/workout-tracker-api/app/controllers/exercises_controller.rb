@@ -4,18 +4,18 @@ class ExercisesController < ApplicationController
 
     def index
         exercises = Exercise.all 
-        render json: ExerciseSerializer.new(exercises)
+        render json: exercises
     end
 
     def show
         exercise = Exercise.find_by(id: params[:id])
-        render json: ExerciseSerializer.new(exercise)
+        render json: exercise
     end
 
     def create 
         exercise = Exercise.new(exercise_params)
         if exercise.save 
-            render json: ExerciseSerializer.new(exercise)
+            render json: exercise
         else
             render json: {error: "There was an issue processing your request."}
         end
@@ -25,11 +25,9 @@ class ExercisesController < ApplicationController
 
     def destroy
         exercise = Exercise.find_by(id: params[:id])
-        if exercise.destroy
-            render json: {message: "Exercise removed from workout"}
-        else
-            render json: {error: "There was an issue processing your request."}
-        end
+        exercise.destroy
+        render json: {message: "Exercise removed from workout"}
+       
     end
 
 

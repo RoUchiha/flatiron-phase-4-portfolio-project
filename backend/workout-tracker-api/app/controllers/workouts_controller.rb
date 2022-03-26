@@ -5,12 +5,12 @@ class WorkoutsController < ApplicationController
     def index
         workouts = Workout.all
         options = { include: [:exercises] }
-        render json: WorkoutSerializer.new(workouts, options)
+        render json: workouts
     end
 
     def show
        workout = Workout.find_by(id: params[:id])
-       render json: WorkoutSerializer.new(workout)
+       render json: workouts
     end 
 
    

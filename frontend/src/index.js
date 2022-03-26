@@ -7,19 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', exercises.formSubmit)
 })
 
-const incomplete = '&#x20DE;';
-const complete = '&#x2705;';
 
-const completeState = {
-    '⃞': '✅',
-    '✅': '⃞'
-};
 
 const allChecks = document.querySelectorAll(".complete-button");
 
 function completeCheck(e) {
-    const check = e.target;
-    check.innerHTML = completeState[check.innerHTML];
+    const check = e.currentTarget;
+    check.style.text = line-through
 }
 
 for (const check of allChecks) {

@@ -81,7 +81,7 @@ class Exercise {
 
         
         const completeExercise = document.createElement('button');
-        completeExercise.innerHTML = '&#x20DE;';
+        completeExercise.innerHTML = '&#x2705;';
         completeExercise.title = "Click to mark exercise as complete";
         completeExercise.classList.add("complete-button");
         exerciseDesc.appendChild(completeExercise);

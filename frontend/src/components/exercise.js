@@ -34,16 +34,18 @@ class Exercise {
         exerciseDesc.appendChild(exerciseDistance);
 
         const deleteExercise = document.createElement('button');
-        deleteExercise.innerHTML = "Remove Exercise";
+        deleteExercise.innerText = "Remove Exercise";
+        deleteExercise.id = this.id;
+        exerciseDesc.appendChild(deleteExercise)
 
-        const completeExercise = document.createElement('button');
-        completeExercise.innerHTML = "Done";
+
+        
 
         deleteExercise.addEventListener('click', function (e) {
             e.preventDefault();
-            
+            console.log(e.target.id, "event target")
             const configEx = {
-                method: "DELETE",
+                method: 'DELETE',
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json"
@@ -52,10 +54,18 @@ class Exercise {
 
             fetch(`http://localhost:3000/exercises/${this.id}`, configEx)
             .then(resp => resp.json())
-            .then(json => alert(json.message))
+            .then(json => alert(json.message));
 
             exerciseDesc.remove();
         });
+
+
+        
+        const completeExercise = document.createElement('button');
+        completeExercise.innerHTML = "Done";
+
+
+
         return exerciseDesc;
     };
 

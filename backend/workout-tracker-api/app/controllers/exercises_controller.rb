@@ -36,7 +36,7 @@ class ExercisesController < ApplicationController
         
 
         def exercise_params
-            params.require(:exercise).permit(:name, :category, :sets, :distance, :workout_id)
+            params.require(:exercise).permit(:id, :name, :category, :sets, :distance, :workout_id)
         end
 
 end

@@ -12,8 +12,9 @@ class Workout {
         workoutAll.classList.add("workout");
 
         const workoutName = document.createElement("h2");
-        workoutName.innerHTML = this.name;
+        workoutName.innerHTML = this.name + "'s workout";
         workoutName.name = this.name;
+        workoutName.classList.add(`workout-data-${this.id}`);
 
         workoutName.id = `workout-${this.id}`;
 

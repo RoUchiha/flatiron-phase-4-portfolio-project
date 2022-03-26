@@ -6,6 +6,23 @@ body{
     color: rgb(0, 0, 0)
 }
 
+.ex-data { 
+    margin-left: 50px;
+}
+
+h2 {
+    font-size: medium;
+    width: 200px;
+    border: 10px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 20px;
+    float: left
+  }
+
+h2::first-line {
+    text-decoration: underline;
+}
+
 .scene{
     width:200px;    
     height:200px;

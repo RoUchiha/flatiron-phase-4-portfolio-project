@@ -4,13 +4,12 @@ class WorkoutsController < ApplicationController
 
     def index
         workouts = Workout.all
-        options = { include: [:exercises] }
-        render json: workouts
+        render json: workouts, include: :exercises
     end
 
     def show
        workout = Workout.find_by(id: params[:id])
-       render json: workouts
+       render json: workout
     end 
 
    

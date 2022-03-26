@@ -2,11 +2,11 @@ class ExerciseServices {
 
     formSubmit(e){
         e.preventDefault()
-        const exerciseName = document.getElementById('new-exercise-name')
-        const exerciseCategory = document.getElementById('new-exercise-category')
-        const exerciseSets = document.getElementById('new-exercise-sets')
-        const exerciseDistance = document.getElementById('new-exercise-distance')
-        const exerciseWorkoutId = document.getElementById('workout_id')
+        const exerciseName = document.getElementById('new-exercise-name');
+        const exerciseCategory = document.getElementById('new-exercise-category');
+        const exerciseSets = document.getElementById('new-exercise-sets');
+        const exerciseDistance = document.getElementById('new-exercise-distance');
+        const exerciseWorkoutId = document.getElementById('workout_id');
 
         const exerciseValues = {
             name: exerciseName.value,
@@ -14,7 +14,7 @@ class ExerciseServices {
             sets: exerciseSets.value,
             distance: exerciseDistance.value,
             workout_id: workout_id.value 
-        }
+        };
 
         const configExercise = {
             method: "POST",
@@ -23,7 +23,7 @@ class ExerciseServices {
                 Accept: "application/json"
             },
             body: JSON.stringify(exerciseValues)
-        }
+        };
 
         fetch('http://localhost:3000/exercises', configExercise)
         .then(resp => resp.json())
@@ -32,10 +32,10 @@ class ExerciseServices {
             const workoutsList = document.getElementById(`workout-${newExercise.workout_id}`)
             const appendNewExercise = newExercise.renderExercise()
             workoutsList.appendChild(appendNewExercise)
-        })
+        });
 
-        form.reset()
-    }
+        form.reset();
+    };
 
 
     

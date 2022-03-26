@@ -1,7 +1,7 @@
-class ExerciseSerializer 
+class ExerciseSerializer < ActiveModel::Serializer
 
-    include FastJsonapi::ObjectSerializer
+    
     attributes :name, :category, :sets, :distance, :workout_id
-    belongs_to :workout
+    
 
 end

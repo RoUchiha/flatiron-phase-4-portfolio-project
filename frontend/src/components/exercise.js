@@ -51,7 +51,7 @@ class Exercise {
 
 
         const deleteExercise = document.createElement('button');
-        deleteExercise.innerHTML = '&#x2612;'
+        deleteExercise.innerHTML = '&#x2612;';
         deleteExercise.id = this.id;
         deleteExercise.title = "Remove Exercise";
         deleteExercise.classList.add("delete-button");
@@ -81,7 +81,10 @@ class Exercise {
 
         
         const completeExercise = document.createElement('button');
-        completeExercise.innerHTML = "Done";
+        completeExercise.innerHTML = '&#x20DE;';
+        completeExercise.title = "Click to mark exercise as complete";
+        completeExercise.classList.add("complete-button");
+        exerciseDesc.appendChild(completeExercise);
 
 
 

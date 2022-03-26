@@ -7,10 +7,10 @@ class ExerciseServices {
         const exerciseSets = document.getElementById('new-exercise-sets');
         const exerciseDistance = document.getElementById('new-exercise-distance');
         const exerciseWorkoutId = document.getElementById('workout_id');
-
+        const form = document.getElementById('new-exercise-form')
         const exerciseValues = {
             name: exerciseName.value,
-            category: exerciseCategory,
+            category: exerciseCategory.value,
             sets: exerciseSets.value,
             distance: exerciseDistance.value,
             workout_id: workout_id.value 

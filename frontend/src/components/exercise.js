@@ -16,8 +16,8 @@ class Exercise {
     renderExercise = () => {
         const exerciseDesc = document.createElement('div');
 
-        const exerciseName = document.createElement('li');
-        exerciseName.innerHTML - this.name;
+        const exerciseName = document.createElement('h4');
+        exerciseName.innerHTML = this.name.charAt(0).toUpperCase() + this.name.slice(1);
 
         const exerciseCategory = document.createElement('p');
         exerciseCategory.innerHTML = this.category;

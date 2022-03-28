@@ -84,7 +84,7 @@ class Exercise {
         completeExercise.innerHTML = '&#x2705;';
         completeExercise.title = "Click to mark exercise as complete";
         completeExercise.classList.add("complete-button");
-        exerciseDesc.appendChild(completeExercise);
+        
 
 
 

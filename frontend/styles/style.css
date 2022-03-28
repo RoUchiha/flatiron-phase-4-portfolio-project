@@ -8,6 +8,8 @@ body{
 
 h1 {
     font-size: 50px;
+    
+    text-align: center;
 }
 
 h3 {
@@ -16,12 +18,14 @@ h3 {
 }
 
 
+
 #new-exercise-container {
     font-size: medium;
     width: 500px;
     border: 10px solid rgb(0, 0, 0);
     padding: 10px;
-    margin: 20px;
+    margin-left: 690px;
+    
 }
 
 #new-exercise-form {
@@ -62,13 +66,14 @@ h3 {
      width: 20px;
      color: rgb(111, 23, 211);
      font-size: large;
-     background: rgb(201, 201, 201);
+     background: rgb(0, 0, 0);
      font-weight: bold;
 }
 
 #submit-button {
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 120px;
+    
 }
 
 h2 {
@@ -86,5 +91,7 @@ h2::first-line {
    
 }
 
-
+.ex-done {
+    color: grey;
+}
 

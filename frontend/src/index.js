@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const allChecks = document.querySelectorAll(".complete-button");
 
 function completeCheck(e) {
-    const check = e.currentTarget;
-    check.style.text = line-through
+    const check = e.target;
+    check.classList.add("ex-done");
 }
 
 for (const check of allChecks) {

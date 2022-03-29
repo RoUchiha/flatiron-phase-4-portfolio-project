@@ -14,10 +14,10 @@
 ```
   - cd into backend folder 
   - then cd into workout-tracker-api 
-  - run rails s 
+  - run `rails s `
 
   - then cd into the frontend folder 
-  - run explorer.exe index.html
+  - run `explorer.exe index.html`
 ```
 
 ## Author

@@ -3,3 +3,5 @@ class App {
         this.workouts = new Workouts()
     }
 }
+
+// JS is prototypal

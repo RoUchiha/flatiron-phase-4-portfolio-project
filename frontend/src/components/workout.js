@@ -7,6 +7,15 @@ class Workout {
         this.id = id;
     };
 
+    // constructor function is used to create objects
+    // works like 'initialize' ?
+    // assigns values to properties of the new object
+
+    // class methods/functions are created just like normal
+    // same syntax
+
+    //this = instance of Workout class object 
+
     renderWorkout() {
         const workoutAll = document.getElementById("workouts-container");
         workoutAll.classList.add("workout");
@@ -20,7 +29,7 @@ class Workout {
 
         workoutAll.appendChild(workoutName);
 
-        const exerciseList = this.renderExercises();
+        const exerciseList = this.renderExercises(); //asynchronous (callback)
         workoutName.appendChild(exerciseList);
     };
 
@@ -30,8 +39,8 @@ class Workout {
         const exercises = this.exercises;
         const list = document.createElement("ul");
 
-        exercises.forEach(exercise => {
-            const newExercise = new Exercise(exercise);
+        exercises.forEach(exercise => { // forEach used to iterate over each object in collection
+            const newExercise = new Exercise(exercise); // callback
 
             console.log(exercise, "exercise");
 

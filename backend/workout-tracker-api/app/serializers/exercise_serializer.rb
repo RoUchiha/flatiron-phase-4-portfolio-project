@@ -5,3 +5,5 @@ class ExerciseSerializer < ActiveModel::Serializer
     
 
 end
+
+# serializers allow us to specify an object's associations and translates the object into a format suitable for network transfer

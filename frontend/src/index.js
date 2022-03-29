@@ -4,8 +4,8 @@ const exercises = new ExerciseServices('http://localhost:3000/exercises')
 document.addEventListener('DOMContentLoaded', () => { 
     workouts.getWorkouts(); // callback function
     form = document.getElementById('new-exercise-form');
-    form.addEventListener('submit', exercises.formSubmit)
-})
+    form.addEventListener('submit', exercises.formSubmit);
+});
 
 // eventListener waits for the event associated with it to occur, then executes the functions/methods after that 'event' has happened
 // i.e. wait for click on the assigned target, then execute code for that event

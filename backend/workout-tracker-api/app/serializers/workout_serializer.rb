@@ -4,6 +4,4 @@ class WorkoutSerializer < ActiveModel::Serializer
     
     has_many :exercises
 
-    
-
 end

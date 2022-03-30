@@ -7,6 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', exercises.formSubmit);
 });
 
+
+let new_submit = document.getElementById('user-comments-submit')
+let new_form = document.getElementById('user-comments-form')
+
+new_submit.addEventListener('click', function (e) {
+    e.preventDefault();
+    let new_div = document.getElementById('user-comments-div');
+    let new_comment = document.getElementById('user-comments-input');
+    let new_comment_add = document.createElement('p');
+    new_comment_add.innerHTML = new_comment.value;
+    new_div.appendChild(new_comment_add);
+    new_form.reset();
+})
+
+
 // eventListener waits for the event associated with it to occur, then executes the functions/methods after that 'event' has happened
 // i.e. wait for click on the assigned target, then execute code for that event
 
